@@ -13,11 +13,9 @@ public class MathController {
         return (a+b);
     }
 
-    @GetMapping("/subtract")
+    @GetMapping("/subtract/{a}/and/{b}")
     @ResponseBody
-    public int subtract(){
-        int a = 10;
-        int b = 6;
+    public int subtract(@PathVariable int a, @PathVariable int b){
         return (a-b);
     }
 
