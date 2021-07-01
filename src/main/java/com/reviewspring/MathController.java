@@ -19,19 +19,15 @@ public class MathController {
         return (a-b);
     }
 
-    @GetMapping("/multiply")
+    @GetMapping("/multiply/{a}/and/{b}")
     @ResponseBody
-    public int multiply(){
-        int a=4;
-        int b=5;
+    public int multiply(@PathVariable int a, @PathVariable int b){
         return (a*b);
     }
 
-    @GetMapping("/divide")
+    @GetMapping("/divide/{a}/and/{b}")
     @ResponseBody
-    public int divide(){
-        int a=6;
-        int b=3;
+    public int divide(@PathVariable int a, @PathVariable int b){
         return (a/b);
     }
 
