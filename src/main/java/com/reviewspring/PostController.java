@@ -3,6 +3,7 @@ package com.reviewspring;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -17,5 +18,16 @@ public class PostController {
     @ResponseBody
     public String postName(@PathVariable int id){
         return "test";
+    }
+
+    @GetMapping("/posts/create")
+    @ResponseBody
+    public String createPost(){
+        return "post created";
+    }
+
+    @PostMapping("/posts/create")
+    public String showForm(){
+        return "post created";
     }
 }
